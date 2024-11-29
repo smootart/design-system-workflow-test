@@ -1,0 +1,30 @@
+{
+  "none": {
+    "value": "0",
+    "type": "number"
+  },
+  "extra-small": {
+    "value": "4",
+    "type": "number"
+  },
+  "small": {
+    "value": "8",
+    "type": "number"
+  },
+  "medium": {
+    "value": "12",
+    "type": "number"
+  },
+  "large": {
+    "value": "16",
+    "type": "number"
+  },
+  "extra-large": {
+    "value": "28",
+    "type": "number"
+  },
+  "full": {
+    "value": "1000",
+    "type": "number"
+  }
+}

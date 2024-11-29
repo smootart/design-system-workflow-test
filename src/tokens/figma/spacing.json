@@ -1,0 +1,50 @@
+{
+  "spacing-100": {
+    "value": "8",
+    "type": "number"
+  },
+  "spacing-1000": {
+    "value": "96",
+    "type": "number"
+  },
+  "spacing-200": {
+    "value": "12",
+    "type": "number"
+  },
+  "spacing-300": {
+    "value": "16",
+    "type": "number"
+  },
+  "spacing-400": {
+    "value": "24",
+    "type": "number"
+  },
+  "spacing-50": {
+    "value": "2",
+    "type": "number"
+  },
+  "spacing-500": {
+    "value": "32",
+    "type": "number"
+  },
+  "spacing-600": {
+    "value": "40",
+    "type": "number"
+  },
+  "spacing-700": {
+    "value": "48",
+    "type": "number"
+  },
+  "spacing-75": {
+    "value": "4",
+    "type": "number"
+  },
+  "spacing-800": {
+    "value": "64",
+    "type": "number"
+  },
+  "spacing-900": {
+    "value": "80",
+    "type": "number"
+  }
+}
