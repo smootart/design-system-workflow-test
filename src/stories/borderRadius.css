@@ -1,0 +1,37 @@
+.row {
+    display: flex;
+    gap: 1rem;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #a0f89c;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.none {
+    border-radius: calc(var(--none) * 1px);
+}
+.extra-small {
+    border-radius: calc(var(--extra-small) * 1px);
+}
+.small {
+    border-radius: calc(var(--small) * 1px);
+}
+.medium {
+    border-radius: calc(var(--medium) * 1px);
+}
+.large {
+    border-radius: calc(var(--large) * 1px);
+}
+.extra-large {
+    border-radius: calc(var(--extra-large) * 1px);
+}
+.full {
+    border-radius: calc(var(--full) * 1px);
+}
