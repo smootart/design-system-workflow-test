@@ -1,0 +1,32 @@
+{
+  "extra-small": {
+    "value": 4,
+    "type": "number",
+    "prefix": "borderradius"
+  },
+  "small": {
+    "value": 8,
+    "type": "number",
+    "prefix": "borderradius"
+  },
+  "medium": {
+    "value": 12,
+    "type": "number",
+    "prefix": "borderradius"
+  },
+  "large": {
+    "value": 16,
+    "type": "number",
+    "prefix": "borderradius"
+  },
+  "extra-large": {
+    "value": 28,
+    "type": "number",
+    "prefix": "borderradius"
+  },
+  "full": {
+    "value": 1000,
+    "type": "number",
+    "prefix": "borderradius"
+  }
+}

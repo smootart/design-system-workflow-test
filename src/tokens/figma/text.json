@@ -1,0 +1,23 @@
+{
+  "textstyle": {
+    "label4-bold": {
+      "value": "{text.text-style}",
+      "type": "fontFamily",
+      "prefix": "text"
+    }
+  },
+  "lineheight": {
+    "label4-bold": {
+      "value": "{text.default}",
+      "type": "fontFamily",
+      "prefix": "text"
+    }
+  },
+  "fontweight": {
+    "label4-bold": {
+      "value": "{text.bold}",
+      "type": "fontFamily",
+      "prefix": "text"
+    }
+  }
+}
