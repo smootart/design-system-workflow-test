@@ -11,9 +11,11 @@ import {
     source: [
       'src/tokens/figma/$metadata.json',
       'src/tokens/figma/$themes.json',
-      'src/tokens/figma/border-radius.json',
+      'src/tokens/figma/borderradius.json',
+      'src/tokens/figma/scale.json',
       'src/tokens/figma/semantic.json',
       'src/tokens/figma/spacing.json',
+      'src/tokens/figma/text.json',
     ],
     preprocessors: ['tokens-studio'], 
     platforms: {

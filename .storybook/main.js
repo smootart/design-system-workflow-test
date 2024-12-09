@@ -15,6 +15,12 @@ const config = {
     options: {},
   },
   staticDirs: [path.resolve(__dirname, '../public')], // 절대 경로로 지정
-  // staticDirs: ["..\\public"],
+  webpackFinal: async (config) => {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+    return config;
+  },
 };
 export default config;
