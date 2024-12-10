@@ -1,5 +1,5 @@
 /** @type { import('@storybook/react-webpack5').StorybookConfig } */
-const path = require('path');
+import path from 'path';
 
 const config = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -14,7 +14,7 @@ const config = {
     name: "@storybook/react-webpack5",
     options: {},
   },
-  staticDirs: [path.resolve(__dirname, '../public')], // 절대 경로로 지정
+  staticDirs: [path.resolve(process.cwd(), 'public')],
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.svg$/,
