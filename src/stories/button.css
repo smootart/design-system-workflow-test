@@ -10,6 +10,7 @@
   line-height: 1;
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+/* buttonType - primary */
 .storybook-button--primary {
   background-color: var(--primary-button-bg);
   color: var(--text-on-primary);
@@ -20,30 +21,62 @@
 .storybook-button--primary:hover {
   background-color: var(--primary-button-bg-hover);
 }
-
+.storybook-button--primary:active {
+  background-color: var(--primary-button-bg);
+}
+/* buttonType - secondary */
 .storybook-button--secondary {
   background-color: var(--secondary-button-bg);
   color: var(--text-on-primary);
 }
-
 .storybook-button--secondary:hover {
   background-color: var(--secondary-button-bg-hover);
 }
-.storybook-button--small {
-  padding: 10px 16px;
-  font-size: 12px;
-  gap: 4px;
+.storybook-button--secondary:active {
+  background-color: var(--secondary-button-bg-hover);
 }
+/* buttonType - secondary-low */
+.storybook-button--secondary-low {
+  background-color: var(--content-bg-1);
+  color: var(--text-label);
+}
+.storybook-button--secondary-low:hover {
+  background-color: var(--secondary-button-bg-low);
+}
+.storybook-button--secondary-low:active {
+  background-color: var(--secondary-button-bg-low-hover);
+}
+/* buttonType - tertiary */
+.storybook-button--tertiary {
+  background-color: var(--secondary-button-bg-low);
+  color: var(--text-label);
+}
+.storybook-button--tertiary:hover {
+  background-color: var(--secondary-button-bg-low-hover);
+}
+.storybook-button--tertiary:active {
+  background-color: var(--secondary-button-bg-low-hover);
+}
+
+/* size */
 .storybook-button--medium {
-  padding: 11px 20px;
+  padding-top: calc(var(--spacing-200) * 1px);
+  padding-bottom: calc(var(--spacing-200) * 1px);
+  padding-left: calc(var(--spacing-300) * 1px);
+  padding-right: calc(var(--spacing-300) * 1px);
   font-size: 14px;
-  gap: 4px;
+  gap: calc(var(--spacing-75) * 1px);
 }
 .storybook-button--large {
-  padding: 12px 24px;
+  padding-top: calc(var(--spacing-300) * 1px);
+  padding-bottom: calc(var(--spacing-300) * 1px);
+  padding-left: calc(var(--spacing-400) * 1px);
+  padding-right: calc(var(--spacing-400) * 1px);
   font-size: 16px;
-  gap: 8px;
+  gap: calc(var(--spacing-100) * 1px);
 }
+
+/* shape */
 .storybook-button--round {
   border-radius: calc(var(--full) * 1px);
 }
@@ -51,36 +84,49 @@
   border-radius: calc(var(--extra-small) * 1px);
 }
 
+/* loading by buttonType */
 .storybook-primary-button-bg-loading {
   background-color: var(--primary-button-bg-disabled) !important;
   border-color: transparent !important;
   cursor : wait
 }
-.storybook-secondary-button-bg-loading {
+.storybook-secondary-button-bg-loading,
+.storybook-secondary-low-button-bg-loading,
+.storybook-tertiary-button-bg-loading {
   background-color: var(--secondary-button-bg-disabled) !important;
   border-color: transparent !important;
   cursor : wait
 } 
 .storybook-primary-button-bg-loading span,
 .storybook-secondary-button-bg-loading span,
+.storybook-secondary-low-button-bg-loading span,
+.storybook-tertiary-button-bg-loading span,
 .storybook-primary-button-bg-loading .icon-plus,
-.storybook-secondary-button-bg-loading .icon-plus {
+.storybook-secondary-button-bg-loading .icon-plus,
+.storybook-secondary-low-button-bg-loading .icon-plus,
+.storybook-tertiary-button-bg-loading .icon-plus {
   visibility: hidden;
 }
 
+/* disabled by buttonType */
 .storybook-primary-button-bg-disabled,
-.storybook-secondary-button-bg-disabled {
+.storybook-secondary-button-bg-disabled,
+.storybook-secondary-low-button-bg-disabled,
+.storybook-tertiary-button-bg-disabled {
   color: var(--secondary-button-text-disabled) !important;
   background-color: var(--secondary-button-bg-disabled) !important;
   border-color: transparent !important;
   cursor : not-allowed;
 }
 .storybook-primary-button-bg-disabled svg, 
-.storybook-secondary-button-bg-disabled svg {
+.storybook-secondary-button-bg-disabled svg,
+.storybook-secondary-low-button-bg-disabled svg,
+.storybook-tertiary-button-bg-disabled svg {
   filter: none;
   fill: var(--secondary-button-text-disabled) !important;
 }
 
+/* icon */
 .storybook-icon {
   display: block;
 }
@@ -91,7 +137,6 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
-.storybook-button--small .storybook-icon,
 .storybook-button--medium .storybook-icon {
   width: 16px;
   height: 16px;
@@ -101,5 +146,9 @@
   height: 20px;
 }
 .icon-plus {
-  fill: #fff;
+  fill: var(--text-on-primary);
+}
+.storybook-button--secondary-low .icon-plus,
+.storybook-button--tertiary .icon-plus {
+  fill: var(--text-label);
 }

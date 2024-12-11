@@ -14,11 +14,11 @@ import './button.css';
 
 
 /** Primary UI component for user interaction */
-export const Button = ({ primary, backgroundColor, size, label, shape, isDisabled, isLoading, iconType, iconLeft, iconRight, ...props }) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+export const Button = ({ buttonType, backgroundColor, size, label, shape, isDisabled, isLoading, iconType, iconLeft, iconRight, ...props }) => {
+  const mode = `storybook-button--${buttonType}`;
 
-  const disabled = isDisabled ? `storybook-${primary ? 'primary' : 'secondary'}-button-bg-disabled` : '';
-  const loading = isLoading ? `storybook-${primary ? 'primary' : 'secondary'}-button-bg-loading` : '';  
+  const disabled = isDisabled ? `storybook-${buttonType}-button-bg-disabled` : '';
+  const loading = isLoading ? `storybook-${buttonType}-button-bg-loading` : '';  
 
   const plusIconEl = () => {
     switch (iconType) {
@@ -51,12 +51,11 @@ export const Button = ({ primary, backgroundColor, size, label, shape, isDisable
 };
 
 Button.propTypes = {
-  /** Is this the principal call to action on the page? */
-  primary: PropTypes.bool,
+  buttonType: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'secondary-low']),
   /** What background color to use */
   backgroundColor: PropTypes.string,
   /** How large should the button be? */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['medium', 'large']),
   shape: PropTypes.oneOf(['round', 'square']),
   /** Button contents */
   label: PropTypes.string.isRequired,
@@ -70,8 +69,8 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  buttonType: 'primary',
   backgroundColor: null,
-  primary: false,
   size: 'medium',
   shape: 'round',
   onClick: undefined,
