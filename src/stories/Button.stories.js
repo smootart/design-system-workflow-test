@@ -24,8 +24,8 @@ export default {
         disable: true,
       },
     },
-    // showOutline: { table: { disable: true }},
-    // outline: { if: { arg: 'showOutline', truthy: true }},
+    showOutline: { table: { disable: true }},
+    outline: { if: { arg: 'showOutline', truthy: true }},
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: { onClick: fn() },
@@ -48,6 +48,8 @@ export const Primary = {
   args: {
     ...defaultArgs,
     buttonType: 'primary',
+    showOutline: true,
+    outline: false,
   },
 };
 
@@ -55,6 +57,8 @@ export const Secondary = {
   args: {
     ...defaultArgs,
     buttonType: 'secondary',
+    showOutline: true,
+    outline: false,
   },
 };
 

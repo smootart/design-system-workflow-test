@@ -23,6 +23,23 @@
 .storybook-button--primary:active {
   background-color: var(--primary-button-bg);
 }
+/* buttonType - primary (outline) */
+.storybook-button--primary-outline {
+  background-color: var(--content-bg-1);
+  color: var(--text-primary);
+  border: 1px solid var(--primary-button-line);
+}
+.storybook-button--primary-outline svg {
+  fill:var(--text-primary);
+}
+.storybook-button--primary-outline:hover {
+  background-color: var(--primary-button-bg-low-hover);
+  border-color: var(--primary-button-line-hover);
+}
+.storybook-button--primary-outline:active {
+  background-color: var(--primary-button-bg-low);
+  border-color: var(--primary-button-line);
+}
 /* buttonType - secondary */
 .storybook-button--secondary {
   background-color: var(--secondary-button-bg);
@@ -33,6 +50,23 @@
 }
 .storybook-button--secondary:active {
   background-color: var(--secondary-button-bg-hover);
+}
+/* buttonType - secondary (outline) */
+.storybook-button--secondary-outline {
+  background-color: var(--content-bg-1);
+  color: var(--text-label);
+  border: 1px solid var(--secondary-button-line-low);
+}
+.storybook-button--secondary-outline svg {
+  fill:var(--text-label);
+}
+.storybook-button--secondary-outline:hover {
+  background-color: var(--primary-button-bg-mono-hover);
+  border-color: var(--secondary-button-line-low-hover);
+}
+.storybook-button--secondary-outline:active {
+  background-color: var(--secondary-button-bg-low-hover);
+  border-color: var(--secondary-button-line-low-hover);
 }
 /* buttonType - secondary-low */
 .storybook-button--secondary-low {
@@ -87,23 +121,37 @@
 .storybook-primary-button-bg-loading {
   background-color: var(--primary-button-bg-disabled) !important;
   border-color: transparent !important;
-  cursor : wait
+  cursor : wait;
 }
 .storybook-secondary-button-bg-loading,
 .storybook-secondary-low-button-bg-loading,
 .storybook-tertiary-button-bg-loading {
   background-color: var(--secondary-button-bg-disabled) !important;
   border-color: transparent !important;
-  cursor : wait
+  cursor : wait;
 } 
+.storybook-primary-button-bg-loading-outline {
+  background-color: var(--primary-button-bg-low) !important;
+  border: 1px solid var(--primary-button-line-disabled) !important;
+  cursor : wait
+}
+.storybook-secondary-button-bg-loading-outline {
+  background-color: var(--secondary-button-bg-disabled) !important;
+  border: 1px solid var(--secondary-button-line-disabled) !important;
+  cursor : wait
+}
 .storybook-primary-button-bg-loading span,
 .storybook-secondary-button-bg-loading span,
 .storybook-secondary-low-button-bg-loading span,
 .storybook-tertiary-button-bg-loading span,
+.storybook-primary-button-bg-loading-outline span,
+.storybook-secondary-button-bg-loading-outline span,
 .storybook-primary-button-bg-loading .icon-plus,
 .storybook-secondary-button-bg-loading .icon-plus,
 .storybook-secondary-low-button-bg-loading .icon-plus,
-.storybook-tertiary-button-bg-loading .icon-plus {
+.storybook-tertiary-button-bg-loading .icon-plus,
+.storybook-primary-button-bg-loading-outline .icon-plus,
+.storybook-secondary-button-bg-loading-outline .icon-plus {
   visibility: hidden;
 }
 
@@ -117,10 +165,19 @@
   border-color: transparent !important;
   cursor : not-allowed;
 }
+.storybook-primary-button-bg-disabled-outline,
+.storybook-secondary-button-bg-disabled-outline {
+  color: var(--secondary-button-text-disabled) !important;
+  background-color: var(--secondary-button-bg-disabled) !important;
+  border: 1px solid var(--secondary-button-line-disabled) !important;
+  cursor : not-allowed;
+}
 .storybook-primary-button-bg-disabled svg, 
 .storybook-secondary-button-bg-disabled svg,
 .storybook-secondary-low-button-bg-disabled svg,
-.storybook-tertiary-button-bg-disabled svg {
+.storybook-tertiary-button-bg-disabled svg,
+.storybook-primary-button-bg-disabled-outline svg,
+.storybook-secondary-button-bg-disabled-outline svg {
   filter: none;
   fill: var(--secondary-button-text-disabled) !important;
 }

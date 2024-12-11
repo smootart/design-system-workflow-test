@@ -14,11 +14,11 @@ import './button.css';
 
 
 /** Primary UI component for user interaction */
-export const Button = ({ buttonType, backgroundColor, size, label, shape, isDisabled, isLoading, iconType, iconLeft, iconRight, ...props }) => {
-  const mode = `storybook-button--${buttonType}`;
+export const Button = ({ buttonType, backgroundColor, size, label, shape, isDisabled, isLoading, iconType, iconLeft, iconRight, outline, ...props }) => {
+  const mode = `storybook-button--${buttonType}` + (outline ? '-outline' : '');
 
-  const disabled = isDisabled ? `storybook-${buttonType}-button-bg-disabled` : '';
-  const loading = isLoading ? `storybook-${buttonType}-button-bg-loading` : '';  
+  const disabled = isDisabled ? `storybook-${buttonType}-button-bg-disabled${outline ? '-outline' : ''}` : '';
+  const loading = isLoading ? `storybook-${buttonType}-button-bg-loading${outline ? '-outline' : ''}` : '';  
 
   const plusIconEl = () => {
     switch (iconType) {
@@ -66,6 +66,7 @@ Button.propTypes = {
   iconType: PropTypes.oneOf(['thin', 'regular', 'fill']),
   iconLeft: PropTypes.bool,
   iconRight: PropTypes.bool,
+  outline: PropTypes.bool,
 };
 
 Button.defaultProps = {
