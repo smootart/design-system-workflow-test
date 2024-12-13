@@ -99,6 +99,7 @@
   padding-right: calc(var(--spacing-300) * 1px);
   font-size: 14px;
   gap: calc(var(--spacing-75) * 1px);
+  height: 38px;
 }
 .storybook-button--large {
   padding-top: calc(var(--spacing-300) * 1px);
@@ -107,6 +108,7 @@
   padding-right: calc(var(--spacing-400) * 1px);
   font-size: 16px;
   gap: calc(var(--spacing-100) * 1px);
+  height: 52px;
 }
 
 /* shape */
